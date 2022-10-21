@@ -6,7 +6,15 @@ F2 = 'test2.txt'
 F3 = 'test3.txt'
 F = 'test.txt'
 
-parser = Parser(F, 'a+a*a')
+F_str = 'a+a*a'
+F1_str = 'm/abc/'
+F1_str1 = '!/abc/'
+F1_str2 = '/abc/'
+F2_str = 'abxy'
+F3_str = 'ba'
+
+
+parser = Parser(F1, F1_str2)
 M = parser.run()
 print(parser)
 PDA = PDA(M)
@@ -17,11 +25,3 @@ if story:
         print(mov)
 else:
     print('NOT OK')
-
-# for key in M.keys():
-#     print(f'-------------------------------{key} ---------------------')
-#     if key == 'd1' or key == 'd2':
-#         for item in M[key]:
-#             print(item)
-#     else:
-#         print(M[key])
